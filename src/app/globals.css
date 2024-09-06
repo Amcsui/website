@@ -42,6 +42,6 @@ body {
 }
 
 .font-lalezar {
-  font-family: "Lalezar";
+  font-family: var(--font-lalezar);
   @apply text-gray-800;
 }
