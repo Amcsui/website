@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: var(--background);
+}
+
+.gradient{
+  background-image: linear-gradient(#e1d1f8, var(--background));
+  /* background-color: rgb(214, 167, 245); */
+}
+
+:root {
+  --background: #f9f6fe;
+  --on-background: #050505;
+  --on-background-variant: #3b3b3b;
+
+  --primary: #4a009e;
+  --on-primary: #fefefe;
+
+  --primary-container: #ede8f3;
+  --on-primary-container: #1e061e;
+
+  --secondary: #8e4c0e;
+  --on-secondary: #e7e7e7;
+
+  --secondary-container: #ffe5ce;
+  --on-secondary-container: #102135;
+
+  --surface: #fefefe;
+  --surface-darker: #f7f7f7;
+  --surface-dark: #bababa;
+  --on-surface: #0d0d0d;
+  --on-surface-variant: #4e4e4e;
+
+  --tertiary: #2d70a0;
+  --tertiary-container: #d8ecff;
+
+  --outline: #ccbee2;
+  --outline-variant: #eae9e9;
+}
+
+.font-lalezar {
+  font-family: "Lalezar";
+  @apply text-gray-800;
+}
