@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Lalezar, Noto_Sans_Arabic } from "next/font/google";
 import Image from "next/image";
 import Logo from "../assets/logo.svg"
-import '@fontsource/lalezar';
 import Link from "next/link";
 
 
@@ -26,11 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl">
       <body className={noto.className + " relative cursor-default " + lalezar.variable}>
-        <div className="h-[90vh] w-screen gradient absolute top-0 left-0 -z-10"></div>
-        <div className="flex flex-col items-center w-full gap-4 lg:gap-12 pt-8 md:pt-12 pb-6 px-4 md:px-8 lg:px-0 m-auto">
+        <div className="flex flex-col items-center w-full gap-4 lg:gap-12 pt-8 pb-6 px-4 md:px-8 lg:px-0 m-auto">
           <div className="w-full max-w-[54rem]">
-            <Link href="/">
-              <Image src={Logo} alt="amcsui logo" />
+            <Link href="/" className="size-16 block">
+              <Image src={Logo} alt="amcsui logo" className="size-full" />
             </Link>
           </div>
           {children}
