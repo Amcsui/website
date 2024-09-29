@@ -150,7 +150,7 @@ export default function Home() {
         <Headline title="پیوند‌ها" align="right" />
         <div className="flex flex-wrap gap-x-4 gap-y-2">
           <SocialLink href="http://telegram.me/AMCSUI" title="کانال تلگرام اصلی" img={Telegram} />
-          <SocialLink href="" title="صفحه لینکدین" img={LinkedIn} />
+          <SocialLink href="https://www.linkedin.com/company/amcsui" title="صفحه لینکدین" img={LinkedIn} />
           <SocialLink href="https://www.instagram.com/amcsui/" title="صفحه اینستاگرام" img={Instagram} />
           <SocialLink href="http://telegram.me/AMCSUIClubs" title="کانال تلگرام کلاب‌ها" img={Telegram} />
           <SocialLink href="https://t.me/AMCSUIChat" title="گروه تلگرام همکاری" img={Telegram} />
