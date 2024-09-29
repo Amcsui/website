@@ -4,7 +4,6 @@
 
 body {
   background-color: var(--background);
-  font-family: "Noto Sans Arabic";
 }
 
 .gradient{
@@ -42,7 +41,6 @@ body {
 }
 
 .font-lalezar {
-  /* font-family: var(--font-lalezar); */
-  font-family: "Lalezar";
+  font-family: var(--font-lalezar);
   @apply text-gray-800;
 }

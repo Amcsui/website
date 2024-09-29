@@ -13,6 +13,7 @@ import HRBranch from '../assets/branches/hr.svg'
 import TechnicalBranch from '../assets/branches/technical.svg'
 import EducationBranch from '../assets/branches/education.svg'
 import LogisticBranch from '../assets/branches/logistics.svg'
+import BranchesHeader from "../assets/branches/header.svg"
 
 export default function Home() {
   return (
@@ -44,7 +45,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col gap-6 lg:gap-16">
         <Headline title="شاخه‌های انجمن" />
         <div className="justify-center items-center gap-9 relative hidden lg:flex">
           <Image src={Branchess} alt="amcsui branches" className="w-40 md:w-72 z-10" />
@@ -55,26 +56,29 @@ export default function Home() {
           </div>
           <div className="flex flex-col bg-[#e2d9f3] px-4 py-2 rounded absolute w-[360px] top-27 -left-9 pr-14">
             <div className="size-20 bg-background absolute -right-8 top-1 rounded-full"></div>
-            <div className="font-lalezar">توسعه فنی</div>
-            <div className="text-body-sm">مهندسی نرم‌افزار و داده؛ توسعه وب (توسعه بک‌اند و فرانت‌اند)؛‌ آی‌تی؛‌ باقی مهارت‌های کامپیوتری</div>
-          </div>
-          <div className="flex flex-col bg-[#e2d9f3] px-4 py-2 rounded absolute w-[360px] -bottom-2 left-10 pr-14">
-            <div className="size-20 bg-background absolute -right-8 top-1 rounded-full"></div>
-            <div className="font-lalezar">تولید محتوا</div>
-            <div className="text-body-sm">تولید و ادیت محتوای متنی، گرافیکی، ویدیوئی و صوتی؛ تامین محتوای هنری (نقاشی، ساز و ... )</div>
-          </div>
-          <div className="flex flex-col bg-[#e2d9f3] px-4 py-2 rounded absolute w-[360px] bottom-2 -right-4 pl-14">
-            <div className="size-20 bg-background absolute -left-8 top-1 rounded-full"></div>
-            <div className="font-lalezar">منابع انسانی</div>
-            <div className="text-body-sm">روابط عمومی با خارج از انجمن؛ جذب و توانمند‌سازی اعضا؛‌ گزارش نویسی؛‌ مدیریت شبکه‌های اجتماعی</div>
-          </div>
-          <div className="flex flex-col bg-[#e2d9f3] px-4 py-2 rounded absolute w-[360px] top-9 -right-8 pl-14">
-            <div className="size-20 bg-background absolute -left-8 top-1 rounded-full"></div>
             <div className="font-lalezar">تدارکات و اجرا</div>
             <div className="text-body-sm">بازو‌های اجرایی؛ تعیین، ‌تامین و پیگیری دریافت تدارکات؛ مدیریت منابع مالی و دارایی‌های انجمن</div>
           </div>
+          <div className="flex flex-col bg-[#e2d9f3] px-4 py-2 rounded absolute w-[360px] -bottom-2 left-10 pr-14">
+            <div className="size-20 bg-background absolute -right-8 top-1 rounded-full"></div>
+            <div className="font-lalezar">منابع انسانی</div>
+            <div className="text-body-sm">روابط عمومی با خارج از انجمن؛ جذب و توانمند‌سازی اعضا؛‌ گزارش نویسی؛‌ مدیریت شبکه‌های اجتماعی</div>
+          </div>
+          <div className="flex flex-col bg-[#e2d9f3] px-4 py-2 rounded absolute w-[360px] bottom-2 -right-4 pl-14">
+            <div className="size-20 bg-background absolute -left-8 top-1 rounded-full"></div>
+            <div className="font-lalezar">تولید محتوا</div>
+            <div className="text-body-sm">تولید و ادیت محتوای متنی، گرافیکی، ویدیوئی و صوتی؛ تامین محتوای هنری (نقاشی، ساز و ... )</div>
+          </div>
+          <div className="flex flex-col bg-[#e2d9f3] px-4 py-2 rounded absolute w-[360px] top-9 -right-8 pl-14">
+            <div className="size-20 bg-background absolute -left-8 top-1 rounded-full"></div>
+            <div className="font-lalezar">توسعه فنی</div>
+            <div className="text-body-sm">مهندسی نرم‌افزار و داده؛ توسعه وب (توسعه بک‌اند و فرانت‌اند)؛‌ آی‌تی؛‌ باقی مهارت‌های کامپیوتری</div>
+          </div>
         </div>
         <div className="gap-x-3 gap-y-12 grid grid-cols-2 lg:hidden">
+          <div className="col-span-2 flex justify-center items-center">
+            <Image className="h-24" src={BranchesHeader} alt=""></Image>
+          </div>
           <div className="bg-primary-container rounded-lg flex flex-col gap-2 px-3 pb-4 pt-12 relative">
             <div className="absolute -top-8 bg-background rounded-full size-[68px] left-0 right-0 mx-auto">
               <Image src={EducationBranch} alt="" />
@@ -91,14 +95,14 @@ export default function Home() {
           </div>
           <div className="bg-primary-container rounded-lg flex flex-col gap-2 px-3 pb-4 pt-12 relative">
             <div className="absolute -top-8 bg-background rounded-full size-[68px] left-0 right-0 mx-auto">
-              <Image src={TechnicalBranch} alt=""/>
+              <Image src={TechnicalBranch} alt="" />
             </div>
             <div className="font-lalezar text-center text-lg">توسعه فنی</div>
             <div className="text-body-sm text-center text-pretty">مهندسی نرم‌افزار و داده؛ توسعه وب (توسعه بک‌اند و فرانت‌اند)؛‌ آی‌تی؛‌ باقی مهارت‌های کامپیوتری</div>
           </div>
           <div className="bg-primary-container rounded-lg flex flex-col gap-2 px-3 pb-4 pt-12 relative">
             <div className="absolute -top-8 bg-background rounded-full size-[68px] left-0 right-0 mx-auto">
-              <Image src={HRBranch} alt=""  />
+              <Image src={HRBranch} alt="" />
             </div>
             <div className="font-lalezar text-center text-lg">منابع انسانی</div>
             <div className="text-body-sm text-center text-pretty">روابط عمومی با خارج از انجمن؛ جذب و توانمند‌سازی اعضا؛‌ گزارش نویسی؛‌ مدیریت شبکه‌های اجتماعی</div>
