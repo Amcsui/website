@@ -1,9 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Lalezar, Noto_Sans_Arabic } from "next/font/google";
-import Image from "next/image";
-import Logo from "../assets/logo.svg"
-import Link from "next/link";
+import Navbar from "./Navbar";
 
 
 const noto = Noto_Sans_Arabic({ subsets: ["arabic"] })
@@ -23,14 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="rtl">
+    <html lang="en" dir="rtl" data-theme="light">
       <body className={noto.className + " relative cursor-default " + lalezar.variable}>
         <div className="flex flex-col items-center w-full gap-4 lg:gap-12 pt-8 pb-6 px-4 md:px-8 lg:px-0 m-auto">
-          <div className="w-full max-w-[54rem]">
+          {/* <div className="w-full max-w-[54rem]">
             <Link href="/" className="size-16 block">
               <Image src={Logo} alt="amcsui logo" className="size-full" />
             </Link>
-          </div>
+          </div> */}
+          <Navbar/>
           {children}
         </div>
         <br />
