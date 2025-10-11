@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@fontsource/lalezar": "^5.0.13",
+    "@next/font": "^14.2.15",
     "@tailwindcss/postcss": "^4.1.14",
+    "lucide-react": "^0.545.0",
     "next": "^15.5.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
