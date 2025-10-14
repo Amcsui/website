@@ -11,36 +11,36 @@ class MockDataService {
   private generateAllMockData() {
     const mockSummaries: EventSummary[] = [
       {
-        id: "iut-cpc-2023",
-        title: "مسابقه برنامه‌نویسی دانشگاه صنعتی اصفهان",
-        desc: "بزرگترین مسابقه برنامه‌نویسی دانشجویی در اصفهان، فرصتی برای محک زدن مهارت‌ها و رقابت با بهترین‌ها.",
+        id: "vast",
+        title: "رویداد انتقال تجربه وست",
+        desc: "رویدادی برای معرفی مشاغل حوزه تکنولوژی و فناوری",
         status: EventStatus.done,
         imgSrc: "/images/event-poster.png",
-        href: "/events/iut-cpc-2023",
+        href: "/events/vast",
       },
       {
         id: "sci-city-event",
-        title: "فستیوال علمی سای‌سیتی",
+        title: " مسابقه سای‌سیتی",
         desc: "یک رویداد هیجان‌انگیز و جذاب برای علاقه‌مندان به علم و فناوری با کارگاه‌های عملی و سخنرانی‌های الهام‌بخش.",
         status: EventStatus.ongoing,
         imgSrc: "/images/sci-city-poster.jpeg",
         href: "/events/sci-city-event",
       },
       {
-        id: "ai-workshop-2025",
-        title: "کارگاه هوش مصنوعی پیشرفته",
-        desc: "کارگاه تخصصی دو روزه با تمرکز بر آخرین پیشرفت‌ها در یادگیری عمیق و شبکه‌های عصبی.",
+        id: "latex-workshop",
+        title: "کارگاه زبان لاتک",
+        desc: "کارگاه تخصصی آموزش زبان لاتک.",
         status: EventStatus.upcoming,
         imgSrc: "/images/ai-poster.jpeg",
-        href: "/events/ai-workshop-2025",
+        href: "/events/latex-workshop",
       },
     ];
 
     this.events = mockSummaries;
 
     // 1. IUT CPC 2023
-    this.detailedEvents.set("iut-cpc-2023", {
-      id: "iut-cpc-2023",
+    this.detailedEvents.set("vast", {
+      id: "vast",
       banner: {
         title: "مسابقه برنامه‌نویسی دانشگاه صنعتی اصفهان",
         subtitle: "بهترین اتفاق جهان در حال رخ دادن است.",
@@ -48,21 +48,23 @@ class MockDataService {
         imageAlt: "IUT CPC 2023 Poster",
         details: [
           { icon: "users", text: "مجازی و حضوری" },
-          { icon: "calendar", text: "۲۲ فروردین ۱۴۰۳" },
-          { icon: "clock", text: "ساعت ۱۶ تا ۱۸" },
-          { icon: "dollar", text: "۲۰۰ هزارتومان" },
-          { icon: "pin", text: ["دانشگاه اصفهان، دانشکده ریاضی،", "تالار خوارزمی"] },
+          { icon: "calendar", text: "خرداد ۱۴۰۳" },
+          { icon: "clock", text: "ساعت 9 تا 13" },
+          { icon: "dollar", text: "100 هزارتومان" },
+          { icon: "pin", text: ["دانشگاه اصفهان، جنب ساختمان مرکزی", "تالار پیامبر اعظم"] },
         ],
         buttonText: "ثبت نام",
         description:
           "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.",
       },
       lecturers: [
-        { id: 1, name: "دکتر رضایی", description: "متخصص الگوریتم", imageUrl: "/images/avatar.jpg" },
-        { id: 2, name: "مهندس اکبری", description: "توسعه‌دهنده ارشد", imageUrl: "/images/avatar.jpg" },
+        { id: 1, name: "دکتر علی شریفی زارچی", description: "متخصص الگوریتم و بیوانفورماتیک", imageUrl: "/images/avatar.jpg" },
+        { id: 2, name: " امیرحسن گلشنی", description: "توسعه‌دهنده ارشد", imageUrl: "/images/avatar.jpg" },
+        { id: 3, name: "  میثم مدنی", description: "توسعه‌دهنده ارشد", imageUrl: "/images/avatar.jpg" },
+        { id: 4, name: "امیر حاجی زاده", description: " هم بنیانگذار و متخصص منابع انسانی", imageUrl: "/images/avatar.jpg" },
       ],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      requirements: ["آشنایی با یکی از زبان‌های پایتون، جاوا یا C", "اندکی مغز تمرین داده شده"],
+      requirements: [],
       attachments: [
         { id: 1, text: "پیوست شماره ۱", href: "#" },
         { id: 2, text: "پیوست شماره ۲", href: "#" },
@@ -73,7 +75,7 @@ class MockDataService {
     this.detailedEvents.set("sci-city-event", {
       id: "sci-city-event",
       banner: {
-        title: "فستیوال علمی سای‌سیتی",
+        title: "مسابقه سای‌سیتی",
         subtitle: "جایی که علم و سرگرمی به هم می‌رسند.",
         imageUrl: "/images/sci-city-poster.jpeg",
         imageAlt: "Sci-City Festival Poster",
@@ -82,17 +84,13 @@ class MockDataService {
           { icon: "calendar", text: "۱۵ تا ۱۸ آبان ۱۴۰۴" },
           { icon: "clock", text: "ساعت ۹ صبح تا ۶ عصر" },
           { icon: "dollar", text: "رایگان برای عموم" },
-          { icon: "pin", text: "مرکز همایش‌های علمی شهر" },
+          { icon: "pin", text: "دانشکده اقتصاد" },
         ],
         buttonText: "مشاهده برنامه‌ها",
         description:
           "فستیوال سای‌سیتی یک رویداد چهار روزه پر از آزمایش‌های علمی، کارگاه‌های تعاملی و نمایش‌های شگفت‌انگیز برای تمام سنین است. به ما بپیوندید و دنیای علم را کشف کنید.",
       },
-      lecturers: [
-        { id: 1, name: "پروفسور حسینی", description: "فیزیکدان کوانتوم", imageUrl: "/images/avatar.jpg" },
-        { id: 2, name: "خانم دکتر احمدی", description: "زیست‌شناس مولکولی", imageUrl: "/images/avatar.jpg" },
-        { id: 3, name: "مهندس جوادی", description: "مخترع و کارآفرین", imageUrl: "/images/avatar.jpg" },
-      ],
+      lecturers: [],
       videoUrl: "https://www.youtube.com/embed/6-dZEM2-n5E", // A sample science video
       requirements: ["کنجکاوی و علاقه به یادگیری", "انرژی برای یک روز پر از هیجان"],
       attachments: [
@@ -102,30 +100,26 @@ class MockDataService {
     });
 
     // 3. AI Workshop 2025
-    this.detailedEvents.set("ai-workshop-2025", {
-      id: "ai-workshop-2025",
+    this.detailedEvents.set("latex-workshop", {
+      id: "latex-workshop",
       banner: {
-        title: "کارگاه هوش مصنوعی پیشرفته",
-        subtitle: "آینده را با یادگیری عمیق بسازید.",
-        imageUrl: "/images/ai-poster.jpeg",
-        imageAlt: "AI Workshop Poster",
+        title: "کارگاه زبان لاتک",
+        subtitle: "",
+        imageUrl: "/images/latex-poster.jpeg",
+        imageAlt: "Poster",
         details: [
-          { icon: "users", text: "آنلاین و مجازی" },
-          { icon: "calendar", text: "۵ و ۶ اسفند ۱۴۰۴" },
+          { icon: "users", text: "حضوری و مجازی" },
+          { icon: "calendar", text: "۵ و ۶ اسفند 1403" },
           { icon: "clock", text: "ساعت ۱۴ تا ۲۰" },
-          { icon: "dollar", text: "۱,۵۰۰,۰۰۰ تومان" },
-          { icon: "pin", text: "پلتفرم اسکای‌روم" },
+          { icon: "dollar", text: "۱۵۰۰۰۰ تومان" },
+          { icon: "pin", text: "سایت دانشکده ریاضی" },
         ],
         buttonText: "ثبت نام در کارگاه",
-        description:
-          "این کارگاه تخصصی شما را با جدیدترین تکنیک‌های شبکه‌های عصبی و یادگیری عمیق آشنا می‌کند. این دوره برای دانشجویان و متخصصانی طراحی شده است که به دنبال ارتقای مهارت‌های خود در حوزه هوش مصنوعی هستند.",
+        description: "",
       },
-      lecturers: [
-        { id: 1, name: "دکتر محمدی", description: "محقق هوش مصنوعی", imageUrl: "/images/avatar.jpg" },
-        { id: 2, name: "مهندس نادری", description: "متخصص بینایی ماشین", imageUrl: "/images/avatar.jpg" },
-      ],
+      lecturers: [{ id: 1, name: "داوود نصرتی امیرآبادی", description: " دانشجوی کارشناسی علوم کامپیوتر ", imageUrl: "/images/avatar.jpg" }],
       videoUrl: "https://www.youtube.com/embed/aircAruvnKk", // A sample AI video
-      requirements: ["آشنایی مقدماتی با پایتون", "درک مفاهیم اولیه یادگیری ماشین", "لپتاپ با حداقل ۸ گیگابایت رم"],
+      requirements: ["درک مفاهیم اولیه بزنامه نویسی ", "لپتاپ با داشتن فایل های مورد نیاز لاتک"],
       attachments: [
         { id: 1, text: "سرفصل‌های کامل دوره", href: "#" },
         { id: 2, text: "منابع پیش‌نیاز", href: "#" },
