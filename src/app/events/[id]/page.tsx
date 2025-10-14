@@ -3,8 +3,8 @@ import { notFound } from "next/navigation";
 import EventClientView from "@/components/EventClientView";
 
 // This is an async Server Component
-export default async function EventDetailPage({ params }: { params: { id: string } }) {
-  const { id } = params;
+export default async function EventDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
 
   // Data is fetched securely on the server before the page is rendered.
   const eventData = mockDataService.getEventById(id);
