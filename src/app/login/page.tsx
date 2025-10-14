@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import LoginCircle from "@/assets/LoginCircle.svg";
@@ -25,7 +26,14 @@ export default function Page() {
               />
             </label>
 
-            <button className="btn btn-primary rounded-xl">ورود</button>
+            <button
+              onClick={(e) => {
+                alert("نام کاربری یا کلمه عبور اشتباه است");
+              }}
+              className="btn btn-primary rounded-xl"
+            >
+              ورود
+            </button>
           </div>
 
           <p className="text-sm">
