@@ -1,9 +1,10 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Logo from "../assets/logo.svg";
 import Link from "next/link";
 import OutlineButton from "@/components/OutlineButton";
-import FilledButton from "@/components/FilledButton";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
   const links = [
@@ -11,6 +12,10 @@ function Navbar() {
     { title: "رویداد ها", link: "/events" },
     { title: "درباره ما", link: "/#about_us" },
   ];
+  const PathAndBehave = [{ href: "/login", behave: "none" }];
+
+  const path = usePathname();
+  console.log(path);
   return (
     <div className="navbar border rounded-3xl pr-6 pl-6 max-w-[60rem]">
       <div className="navbar-start">
@@ -56,9 +61,11 @@ function Navbar() {
           <Image src={Logo} alt="amcsui logo" className="size-full" />
         </Link>
       </div>
-      <div className="navbar-end gap-4">
-        <OutlineButton href={"/login"}>ورود/عضویت</OutlineButton>
-      </div>
+      {!(PathAndBehave.find((p) => p.href === path)?.behave === "none") && (
+        <div className="navbar-end gap-4">
+          <OutlineButton href={"/login"}>ورود/عضویت</OutlineButton>
+        </div>
+      )}
     </div>
   );
 }
