@@ -1,19 +1,23 @@
-import { EventStatus } from "@/utils/types";
+import type { EventSummary } from "@/utils/types";
 import EventCard from "./EventCard";
 import Headline from "./Headline";
 
-export default function EventContainer({ title }: { title: string }) {
+type EventContainerProps = {
+  title: string;
+  events: EventSummary[];
+};
+
+export default function EventContainer({ title, events }: EventContainerProps) {
   return (
     <div className="flex flex-col gap-6 max-w-[56rem] w-full items-center ">
       <Headline title={title} />
-      <div className="flex flex-col gap-4 max-w-[53rem]">
-        <EventCard
-          title="سای سیتی"
-          desc="سای سیتی یک رویداد بسیار هیجان انگیز و باحال است سای سیتی یک رویداد بسیار هیجان انگیز و باحال است"
-          status={EventStatus.ongoing}
-          imgSrc=""
-          href="#fsd" />
+      <div className="flex flex-col gap-4 max-w-[53rem] w-full">
+        {events.length > 0 ? (
+          events.map((event) => <EventCard key={event.id} {...event} />)
+        ) : (
+          <p className="text-center text-on-surface-variant">رویدادی برای نمایش وجود ندارد.</p>
+        )}
       </div>
     </div>
-  )
+  );
 }
