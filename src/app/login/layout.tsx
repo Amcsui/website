@@ -1,7 +1,6 @@
-import "./globals.css";
+import "@/app/globals.css";
 import type { Metadata } from "next";
 import { Lalezar, Noto_Sans_Arabic } from "next/font/google";
-import Navbar from "./Navbar";
 
 
 const noto = Noto_Sans_Arabic({ subsets: ["arabic"] })
@@ -29,7 +28,6 @@ export default function RootLayout({
               <Image src={Logo} alt="amcsui logo" className="size-full" />
             </Link>
           </div> */}
-          <Navbar/>
           {children}
         </div>
         <br />
